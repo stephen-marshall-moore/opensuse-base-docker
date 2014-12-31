@@ -4,16 +4,16 @@
 	<description type="system">
 		<author>Stephen Moore</author>
 		<contact>stephen.moore@linux.com</contact>
-		<specification>openSUSE 13.1 docker base image</specification>
+		<specification>openSUSE 13.2 docker base image</specification>
 	</description>
 	<preferences>
-		<type image="lxc" container="os131">
+		<type image="docker" container="os132">
 			<machine>
 				<vmdisk/>
 				<vmnic interface="eth0" mode="veth"/>
 			</machine>
 		</type>
-		<version>1.0.1</version>
+		<version>13.2</version>
 		<packagemanager>zypper</packagemanager>
 		<rpm-check-signatures>false</rpm-check-signatures>
 		<rpm-force>true</rpm-force>
@@ -26,11 +26,11 @@
 		<user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root"/>
 	</users>
 	<repository type="yast2" imageinclude="true">
-		<source path="opensuse://13.1/repo/oss/"/>
+		<source path="opensuse://13.2/repo/oss/"/>
 	</repository>
 	<packages type="image">
 		<package name="coreutils"/>
-		<package name="lxc"/>
+		<package name="docker"/>
 		<namedCollection name="base"/>
 	</packages>
 	<packages type="bootstrap">
