@@ -19,7 +19,7 @@ The recipe:
 
   - Create rootfs of the container:
 
-		$ sudo /usr/bin/kiwi --prepare ./opensuse-base-docker --root /tmp/openSUSE_13_2_base_rootfs
+		$ sudo /usr/sbin/kiwi --prepare ./opensuse-base-docker --root /tmp/openSUSE_13_2_base_rootfs
 
   - Roll the result into a tarball:
 
